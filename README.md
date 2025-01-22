@@ -49,7 +49,7 @@ Desa Ubud Website is The Ubud Village Website is a type of village website that 
 ## 💻 Deployment 
 **Cloning Project**
 - Open the project on github, find the HTTPS or SSH button. Choose and press one of them, then copy the link provided.
-- In your local computer, create or choose the folder you want to save the project. Open the gitbash, type this command and paste the copied-link after that. If you can't find the gitbash, then you should download and install git or your computer.
+- In your local computer, create or choose the folder you want to save the project. Open the gitbash, type this command ```git clone [paste the link]``` and paste the copied-link after that. If you can't find the gitbash, then you should download and install git or your computer.
   
 **Running Project**
 - Open the project on your IDE. Copy file .env by using ```cp.env.example .env``` (change the copied-file from .env.example to .env). Make sure the name of databases already exists in your database system.
