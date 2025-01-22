@@ -1,63 +1,66 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# 💮 Desa Ubud Website Using Laravel 💮
 
+## 🖼️ Project Description 
 <p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+    <img width="800" src="https://github.com/user-attachments/assets/e4312388-853e-4b1e-abc2-5001db25bd6d">
 </p>
 
-## About Laravel
+**Introduction**
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Desa Ubud Website is The Ubud Village Website is a type of village website that provides an overview about Ubud Village, activities/news related to Ubud Village, tourist attractions, and several lodgings located around the village. The website also provides admin page which will manage the content on the website, such as news, objects tours, contacts, and accommodation (in the form of lodging and prices).
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+**Features**
+- **User Registration & Login** 
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+  User registration is used to stored new user data, while User login is used to verify the user data that has been registered through registration feature. Login's verification uses the 
+ _Middleware_ and the _Authentication_ services using library _Auth Facades_. 
+- **Searching & Pagination**
 
-## Learning Laravel
+  Searching is used to find data easily using related keywords, while Pagination is used to display the appearance of the website so that it looks simple and neat. These features use the _Bootstrap_ framework which provides the required design templates. 
+- **Admin Page**
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+  Admin Page is a special admin feature for managing websites. This feature contains CRUD (Create, Read, Update, & Delete) which helps admins create, update, and delete content in website.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## ⚙️ Setup
+**Dependencies**
+  - Laravel == 8x
+  - Bootstrap == 3.4
+  - Composer == 2.0.12
+  - PHP == 3.4.0
+    
+**Tools**
+  - VS CODE : as the IDE (you can use another IDE).  
+  - XAMPP : software to access MySQL Server for Database.  
+  - Browser : for showing up the result (using localhost).
 
-## Laravel Sponsors
+## 🏬 Database Schema 
+**Table & Fields**
+- Database Name: laravel 
+- Total Table: 5 tables
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+  | Table name | Atributes | Purpose |
+  | ---------- | --------- | ------- |
+  | accomodation | id, nama, body, image, harga | saving accomodation data | 
+  | news | id, author_id, title, slug, excerpt, body, image | saving news data | 
+  | comments | id, nama, email, alamat, body | saving comments data |
+  | users | id, nama, email, password (has been encrypted) | saving users data |
+  | tourism | id, title, excerpt, body, image | saving tourism data |
 
-### Premium Partners
+## 💻 Deployment 
+**Cloning Project**
+- Open the project on github, find the HTTPS or SSH button. Choose and press one of them, then copy the link provided.
+- In your local computer, create or choose the folder you want to save the project. Open the gitbash, type this command and paste the copied-link after that. If you can't find the gitbash, then you should download and install git or your computer.
+  
+**Running Project**
+- Open the project on your IDE. Copy file .env by using ```cp.env.example .env``` (change the copied-file from .env.example to .env). Make sure the name of databases already exists in your database system.
+- Open the terminal section and type this command ```composer install```for installing the Composer.
+- Type this command ```php artisan key:generate``` after you there's no doubt in step one and two.
+- After that, type this command ```php artisan migrate``` to migrate the all the table's structures to your database.
+- This project provides a database seeder to give you a data example, so type this command too ```php artisan db:seed```.
+- Finally type this command to run the project ```php artisan serve```.
+- Well done!
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-"# aplikasi-wisata" 
+## 🖋️ Additional Comments 
+**Future Plans**:
+- Improving the design and features in Admin Page.
+- Building a more well-structured database with good and correct table naming.
